@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Score</title>
+  </head>
+  <style>
+    * {
+      font-family: "Courier New", Courier, monospace;
+      font-weight: 600;
+    }
+    #head_uva {
+      display: flex;
+      flex-direction: row;
+      border: 3px solid black;
+      background: linear-gradient(to right, lightgreen, lightblue);
+      box-shadow: 2px 2px 0px black;
+      justify-content: center;
+    }
+    #head_uva ul {
+      list-style-type: none;
+    }
+    #head_uva ul li {
+      font-size: 45px;
+    }
+    #top {
+      margin: 10px;
+    }
+    #top div {
+      margin: 8px;
+      border: 1px solid black;
+      padding: 15px;
+      background-color: pink;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      transition: ease-in 0.5s;
+    }#top div:hover{
+      background:linear-gradient(to left,yellow,lightgreen);
+    }
+    .done {
+      width: 20px;
+      height: 20px;
+      accent-color: #4f46e5; /* tick + fill color */
+      border: 2px solid red;
+    }
+    .progress-container {
+      width: 800px;
+      height: 23px;
+      border: 2px solid #333;
+      border-radius: 5px;
+      padding: 3px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 15px;
+      margin-bottom: auto;
+    }
+
+    #progress {
+      height: 100%;
+      width: 0%;
+      background-color: #007e02;
+      transition: width 0.3s;
+    }
+
+    #percent {
+      margin-top: 5px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <div id="head_uva">
+      <ul>
+        <li><span style="color: red">Problem</span>Parse</li>
+      </ul>
+    </div>
+<div class="progress-container">
+      <div id="progress"></div>
+    </div>
+    <p id="percent">0%</p>
+    <div id="top"></div>
+    
+    <script>
+  const progress = document.getElementById("progress");
+  const percentText = document.getElementById("percent");
+
+  async function loadTopic() {
+    try {
+      const response = await fetch("topic_json.json");
+      const data = await response.json();
+      const top1 = document.getElementById("top");
+
+      // get saved data
+      const saved = JSON.parse(localStorage.getItem("doneTopics")) || [];
+
+      data.forEach((item, index) => {
+        const dv = document.createElement("div");
+        const span = document.createElement("span");
+        const inptick = document.createElement("input");
+
+        span.textContent = item.topicname;
+
+        inptick.type = "checkbox";
+        inptick.classList.add("done");
+
+        // restore checked state
+        if (saved.includes(index)) {
+          inptick.checked = true;
+        }
+
+        inptick.addEventListener("change", () => {
+          updateStorage(index, inptick.checked);
+          updateProgress();
+        });
+
+        dv.append(span);
+        dv.append(inptick);
+        top1.append(dv);
+      });
+
+      updateProgress(); // initial progress restore
+
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  function updateStorage(index, isChecked) {
+    let saved = JSON.parse(localStorage.getItem("doneTopics")) || [];
+
+    if (isChecked) {
+      if (!saved.includes(index)) {
+        saved.push(index);
+      }
+    } else {
+      saved = saved.filter(i => i !== index);
+    }
+
+    localStorage.setItem("doneTopics", JSON.stringify(saved));
+  }
+
+  function updateProgress() {
+    const checkboxes = document.querySelectorAll(".done");
+    const checked = document.querySelectorAll(".done:checked").length;
+
+    const percent = Math.round((checked / checkboxes.length) * 100);
+
+    progress.style.width = percent + "%";
+    percentText.textContent = percent + "%";
+  }
+
+  loadTopic();
+</script>
+
+  </body>
+</html>

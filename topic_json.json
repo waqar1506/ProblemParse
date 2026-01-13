@@ -1,0 +1,33 @@
+[
+    {
+        "topicname":"Basics (Variable, Conditional Statement, Loop, Functions)"
+    },
+    {
+        "topicname":"STL Data Structure"
+    },
+    {
+        "topicname":"STL Algorithms"
+    }
+    ,
+    {
+        "topicname":"Iterative Problems"
+    },
+    {
+        "topicname":"Recursive Problems"
+    },
+    {
+        "topicname":" Backtracking Problems"
+    },
+    {
+        "topicname":" Binary Search Problems"
+    },
+    {
+        "topicname":" Divide and Conquer Problems"
+    },
+    {
+        "topicname":"Greedy Problems"
+    },
+    {
+        "topicname":"DP Problems"
+    }
+]

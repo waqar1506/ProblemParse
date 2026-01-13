@@ -1,0 +1,219 @@
+[
+    {
+        "problemname":"Machined Surfaces",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=355",
+        "problemcategory":"1D Array"
+    },
+    {
+        "problemname":"Synching Signals",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=408",
+        "problemcategory":"1D Array"
+    },
+    {
+        "problemname":"Permutation Arrays",
+        "problem-link":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=423",
+        "problemcategory":"1D Array"
+    },
+    {
+        "problemname":"False Coin",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=606",
+        "problemcategory":"1D Array"
+    },
+    {
+        "problemname":"Box of Bricks",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=532",
+        "problemcategory":"1D Array"
+    },
+    {
+        "problemname":"Let’s Play Magic",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=1919",
+        "problemcategory":"1D Array"
+    },
+    {
+        "problemname":"Group Reverse",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=2133",
+        "problemcategory":"1D Array"
+    },
+    {
+        "problemname":"No Problem",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=2491",
+        "problemcategory":"1D Array"
+    },{
+        "problemname":"Musical Loop",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=2665",
+        "problemcategory":"1D Array"
+    },
+    {
+        "problemname":"Pole Position",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=3302",
+        "problemcategory":"1D Array"
+    },
+    {
+        "problemname":"The Blocks Problem",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=37",
+        "problemcategory":"2D Array"
+    },
+    {
+        "problemname":"Mirror Mirror",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=407",
+        "problemcategory":"2D Array"
+    },
+    {
+        "problemname":"Error Correction",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=482",
+        "problemcategory":"2D Array"
+    },
+    {
+        "problemname":"Rotated Squares",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=1796",
+        "problemcategory":"2D Array"
+    },
+    {
+        "problemname":"Spiral Taps",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=1861",
+        "problemcategory":"2D Array"
+    },
+    {
+        "problemname":"Symmetric Matrix",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=2324",
+        "problemcategory":"2D Array"
+    },
+    {
+        "problemname":"Grid Successors",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=3583",
+        "problemcategory":"2D Array"
+    },
+    {
+        "problemname":"Formula 1",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=3410",
+        "problemcategory":"2D Array"
+    },
+    {
+        "problemname":"Brothers",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=3511",
+        "problemcategory":"2D Array"
+    },
+    {
+        "problemname":"Searching Quickly",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=59",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"ID Codes",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=82",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"Little Black Book",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=391",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"Lunch in Grid City",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=796",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"Wordfish",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=3650",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"What is the Median?",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=1048",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"Contest Scoreboard",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=1199",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"Colin and Ryan",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=1821",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"Children's Game",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=1846",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"Sort Sort and Sort",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=2296",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"Image Coding",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=2635",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"Automate the Grades",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=2877",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"Birthdates",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=3986",
+        "problemcategory":"STL Algorithms"
+    },
+    {
+        "problemname":"Word Index",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=358",
+        "problemcategory":"STL Map"
+    },
+    {
+        "problemname":"The Department of Redundancy",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=425",
+        "problemcategory":"STL Map"
+    },
+    {
+        "problemname":"CDVII",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=1079",
+        "problemcategory":"STL Map"
+    },
+    {
+        "problemname":"Babelfish",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=1223",
+        "problemcategory":"STL Map"
+    },
+    {
+        "problemname":"SQF Problem",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=1627",
+        "problemcategory":"STL Map"
+    }
+    ,
+    {
+        "problemname":"Open Source",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=2180",
+        "problemcategory":"STL Map"
+    }
+    ,
+    {
+        "problemname":"Conformity",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=2261",
+        "problemcategory":"STL Map"
+    }
+    ,
+    {
+        "problemname":"Bankrupt Baker",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=2283",
+        "problemcategory":"STL Map"
+    }
+    ,
+    {
+        "problemname":"Unique Snowflakes",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=2619",
+        "problemcategory":"STL Map"
+    }
+    ,
+    {
+        "problemname":"Ballot Evaluation",
+        "problemlink":"https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=2676",
+        "problemcategory":"STL Map"
+    }
+    
+    
+
+]

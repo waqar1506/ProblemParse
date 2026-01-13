@@ -1,0 +1,99 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}
+body{
+    margin: 3px;
+    background-color: whitesmoke;
+}
+#head1{
+    display: flex;
+    padding: 10px;
+    border: 3px solid black;
+    background: linear-gradient(to right, lightgreen,lightblue);
+    box-shadow: 2px 2px 0px black;
+    justify-content: space-between;
+}
+#head1 ul li{
+    font-size: 25px;
+}
+#head1 ul li a{
+    text-decoration: none;
+    color: black;
+}
+#head1 ul {
+    display: flex;
+    list-style-type: none;
+    gap: 25px;
+}
+
+/* .feature{
+    margin-left: 800px;
+} */
+
+#head2{
+    border: 2px solid black;
+    margin: 15px;
+    color: black;
+    box-shadow: 2px 2px 0px black;
+    background: linear-gradient(to left, cyan,whitesmoke);
+}
+#head2 h1,p {
+    text-align: center;
+}
+#listcode{
+    border: 2px solid black;
+    margin-top: 25px;
+    margin: 4px;
+    background: rgb(133, 219, 255);
+    box-shadow: 4px 4px 0px black;
+}
+#listcode div{
+    padding: 5px;
+}
+#listcode div p{
+    font-size: 18px;
+    font-weight: bolder;
+}
+.hoverDv{
+    transition: all ease 0.5s;
+}
+.hoverDv a{
+    text-decoration: none;
+    color: black;
+}
+.hoverDv:hover{
+    background-color: chartreuse;
+    box-shadow: 0px 0px 9px black;
+}
+#webcode{
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 18px;
+    margin-left: 8px;
+}
+#categ{
+    display: flex;
+    margin: 10px;
+    border: 2px solid black;
+    justify-content: space-between;
+    font-size: 25px;
+    justify-items: center;
+    padding: 5px;
+    border-radius: 10px;
+    transition: all ease-in 0.2s;
+}
+#categ:hover{
+    background-color: lightcyan;
+}
+#num{
+    text-align: center;
+}
+#btn_go button{
+    font-size: 25px;
+    background-color: green;
+    color: white;
+    border: 1px solid green;
+    border-radius: 7px;
+}

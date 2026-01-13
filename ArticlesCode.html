@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+</head>
+<style>
+    body{
+        background-color: seashell;
+    }
+    *{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}   
+    #head_uva{
+        display: flex;
+        flex-direction: row;
+        border: 3px solid black;
+        background: linear-gradient(to right, lightgreen,lightblue);
+        box-shadow: 2px 2px 0px black;
+        justify-content: center;
+    }
+    #head_uva ul{
+        list-style-type: none;
+    }
+    #head_uva ul li{
+        font-size: 45px;
+    }
+    .artik{
+        padding: 10px;
+        border: 2px solid black;
+        margin: 5px;
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 17px;
+        background: linear-gradient(to right, lightblue,blue);
+    }
+    .btn5{
+        border: 1px solid black;
+        border-radius: 5px;
+        font-size: 20px;
+        background: rgb(1, 255, 65);
+        padding: 5px;
+    }
+</style>
+<body>
+   <div id="head_uva">
+      <ul>
+        <li><span style="color: red">Problem</span>Parse</li>
+      </ul>
+    </div>
+
+    <div id="articles_1"></div>
+    <script>
+        async function articlesLoad(){
+            try{
+                const response = await fetch("articles.json")
+                const data = await response.json();
+                const container = document.getElementById("articles_1");
+                data.forEach(item =>{
+                    const row = document.createElement("div");
+                    const btn = document.createElement("button");
+                    row.classList.add("artik")
+                    btn.classList.add("btn5")
+                    row.textContent = item.coding_title;
+                    btn.textContent = "Read";
+                    btn.onclick = () => window.open(item.codinglinks);
+                    row.append(btn);
+                    container.append(row);
+                })
+            }catch(error){
+                console.error(error);
+            }
+        }
+        articlesLoad();
+    </script>
+</body>
+</html>

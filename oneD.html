@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1D Array</title>
+  </head>
+  <style>
+    * {
+      font-family: "Courier New", Courier, monospace;
+      font-weight: 600;
+    }
+    #head_uva {
+      display: flex;
+      flex-direction: row;
+      border: 3px solid black;
+      background: linear-gradient(to right, lightgreen, lightblue);
+      box-shadow: 2px 2px 0px black;
+      justify-content: center;
+    }
+    #head_uva ul {
+      list-style-type: none;
+    }
+    #head_uva ul li {
+      font-size: 45px;
+    }
+    #container {
+      display: flex;
+      flex-direction: column;
+      margin: 5px;
+      border: 1px solid black;
+      box-shadow: 2px 2px 0px black;
+      padding: 5px;
+      font-size: 20px;
+      color: white;
+      background: linear-gradient(to left, rgb(0, 24, 201), rgb(42, 127, 255));
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      padding: 10px;
+      border: 2px solid black;
+      margin: 1px;
+    }
+    .row:hover {
+      background: linear-gradient(to right, green, blue);
+    }
+    .index {
+      width: 40px;
+      font-weight: bold;
+    }
+
+    .problemName {
+      flex: 2;
+    }
+
+    .category {
+      flex: 1;
+    }
+
+    button {
+      padding: 5px 15px;
+      cursor: pointer;
+      font-size: 20px;
+      background-color: turquoise;
+      border: transparent;
+      border-radius: 10px;
+      box-shadow: 2px 2px 0px black;
+      transition: all ease 0.3s;
+    }
+    button:hover {
+      box-shadow: 4px 4px 0px black;
+    }
+    .btnstatus {
+      background-color: red;
+    }
+  </style>
+  <body>
+    <div id="head_uva">
+      <ul>
+        <li><span style="color: red">Problem</span>Parse</li>
+      </ul>
+    </div>
+    <div id="container"></div>
+    <script>
+      async function loadques() {
+        try {
+          const response = await fetch("problems.json");
+          const data = await response.json();
+          const container = document.getElementById("container");
+          const btnsolve = document.getElementById("btnSolve");
+          data.forEach((item, index) => {
+            if (item.problemcategory === "1D Array") {
+              // Parent row
+              const row = document.createElement("div");
+              row.classList.add("row");
+
+              // Index
+              const idx = document.createElement("div");
+              idx.classList.add("index");
+              idx.textContent = index + 1;
+
+              // Problem Name
+              const name = document.createElement("div");
+              name.classList.add("problemName");
+              name.textContent = item.problemname;
+
+              // Category
+              const category = document.createElement("div");
+              category.classList.add("category");
+              category.textContent = item.problemcategory;
+
+              // Button
+              const btnDiv = document.createElement("div");
+              btnDiv.style.display = "flex";
+              btnDiv.style.gap = "10px";
+              const btn = document.createElement("button");
+              btn.textContent = "Go";
+              btn.onclick = () => window.open(item.problemlink, "_blank");
+
+              // Status Button
+              const btnstatus = document.createElement("button");
+              btnstatus.textContent = "Unsolved";
+              btnstatus.style.background = "red";
+              // unique key per problem
+              const storageKey = "status_" + item.problemname;
+
+              // restore saved state
+              let currentStatus =
+                localStorage.getItem(storageKey) || "unsolved";
+              updateButton(btnstatus, currentStatus);
+
+              // toggle on click
+              btnstatus.onclick = () => {
+                currentStatus =
+                  currentStatus === "solved" ? "unsolved" : "solved";
+                localStorage.setItem(storageKey, currentStatus);
+                updateButton(btnstatus, currentStatus);
+              };
+              btnDiv.append(btn, btnstatus);
+              // Append to row
+              row.append(idx, name, category, btnDiv);
+
+              // Append to container
+              container.appendChild(row);
+            }
+          });
+        } catch (err) {
+          console.log("Error loading problems:", err);
+        }
+      }
+      function updateButton(btn, status) {
+        if (status === "solved") {
+          btn.textContent = "Solved";
+          btn.style.background = "green";
+          btn.style.color = "white";
+        } else {
+          btn.textContent = "Unsolved";
+          btn.style.background = "red";
+          btn.style.color = "white";
+        }
+      }
+
+      loadques();
+    </script>
+  </body>
+</html> 

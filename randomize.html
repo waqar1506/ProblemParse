@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randomizing</title>
+</head>
+<style>
+    *{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+}   
+    #head_uva{
+        display: flex;
+        flex-direction: row;
+        border: 3px solid black;
+        background: linear-gradient(to right, lightgreen,lightblue);
+        box-shadow: 2px 2px 0px black;
+        justify-content: center;
+    }
+    #head_uva ul{
+        list-style-type: none;
+    }
+    #head_uva ul li{
+        font-size: 45px;
+    }
+    #div_k{
+        margin: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    #btn_rand{
+        background: linear-gradient(to right, rgb(12, 170, 255),yellow,red);
+        font-size: 25px;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+        transition: all ease 0.3s;
+        cursor: pointer;
+        width: 400px;
+        height: 50px;
+
+    }
+    #btn_rand:hover{
+        box-shadow: none;
+        box-shadow: 3px 3px 0px black;
+
+    }
+    .prob_1{
+        text-align: center;
+        font-size: 23px;
+    }
+    .lnk1{
+        text-decoration: none;
+    }
+    .prob_2{
+        text-align: center;
+        background: black;
+        color: white;
+        padding: 7px;
+        font-size: 27px;
+        box-shadow: 0px 0px 10px black;
+    }
+    #idout{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 190px;
+        margin-right: 190px;
+    }
+    #CFT{
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 15px;
+        transition: all ease 0.3s;
+        margin-right: 10px;
+    }
+    
+    
+</style>
+<body>
+    <div id="head_uva">
+      <ul>
+        <li><span style="color: red">Problem</span>Parse</li>
+      </ul>
+    </div>
+    <div id="div_k">
+   <button id="btn_rand" onclick="generateUVA()">Random UVA Problem</button>
+    </div>
+  <div id="output"></div>
+    
+    <div id="div_k">
+   <select name="" id="CFT">
+    <option value="A">A</option>
+    <option value="B">B</option>
+    <option value="C">C</option>
+    <option value="D">D</option>
+    <option value="E">E</option>
+   </select>
+        <button id="btn_rand" onclick="generateCF()">Random Codeforces Problem</button>
+   
+    </div>
+    <div id="outputCF"></div>
+  <script>
+    function generateUVA() {
+      const min = 36;
+      const max = 5225;
+
+      // Generate random number (inclusive)
+      const randomProblem = Math.floor(Math.random() * (max - min + 1)) + min;
+      const url = `https://onlinejudge.org/index.php?Itemid=8&option=com_onlinejudge&page=show_problem&problem=${randomProblem}`;
+
+      document.getElementById("output").innerHTML = `<div id="idout">
+        <p class="prob_1">Your Problem Is Ready<br>Problem ID: <b>${randomProblem}</b></p>
+        <a class="lnk1" href="${url}" target="_blank"><p class="prob_2">Go to solve</p></a></div>
+      `;
+    }
+
+    function generateCF() {
+      const min = 1;
+      const max = 2183;
+
+      // Generate random number (inclusive)
+      //const randomProblem = Math.floor(Math.random() * (max - min + 1)) + min;
+      const randomProblem = Math.floor(Math.random() * (max - min + 1)) + min;
+      const x = document.getElementById("CFT").value;
+      const url = `https://codeforces.com/problemset/problem/${randomProblem}/${x}`;
+
+      document.getElementById("outputCF").innerHTML = `<div id="idout">
+        <p class="prob_1">Your Problem Is Ready<br>Problem ID: <b>${randomProblem}</b></p>
+        <a class="lnk1" href="${url}" target="_blank"><p class="prob_2">Go to solve</p></a></div>
+      `;
+    }
+  </script>
+</body>
+</html>
